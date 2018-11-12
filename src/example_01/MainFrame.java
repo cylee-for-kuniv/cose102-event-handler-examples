@@ -14,6 +14,7 @@ public class MainFrame extends JFrame {
         container.setLayout(new FlowLayout());
 
         JButton jButton = new JButton("Java");
+        jButton.addActionListener(new ActionHandler());
 
         container.add(jButton);
 
@@ -21,8 +22,13 @@ public class MainFrame extends JFrame {
         setVisible(true);
     }
 
-    class ActionHandler {
-
+    class ActionHandler implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            JButton button = (JButton)e.getSource();
+            if (button.getText().equals("Java")) button.setText("Python");
+            else button.setText("Java");
+        }
     }
 
     public static void main(String[] args) {

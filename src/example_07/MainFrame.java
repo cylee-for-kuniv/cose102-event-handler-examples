@@ -15,7 +15,28 @@ public class MainFrame extends JFrame {
         container.setLayout(null);
 
         container.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyReleased(KeyEvent e) {
+                int xCoord = moveMeLabel.getX();
+                int yCoord = moveMeLabel.getY();
 
+                switch(e.getKeyCode()) {
+                    case KeyEvent.VK_UP:
+                        yCoord -= 10;
+                        break;
+                    case KeyEvent.VK_DOWN:
+                        yCoord += 10;
+                        break;
+                    case KeyEvent.VK_LEFT:
+                        xCoord -= 10;
+                        break;
+                    case KeyEvent.VK_RIGHT:
+                        xCoord += 10;
+                        break;
+                }
+
+                moveMeLabel.setLocation(xCoord, yCoord);
+            }
         });
 
         moveMeLabel.setLocation(50, 50);
@@ -24,6 +45,9 @@ public class MainFrame extends JFrame {
         container.add(moveMeLabel);
         setSize(500, 300);
         setVisible(true);
+
+        container.setFocusable(true);
+        container.requestFocus();
     }
 
     public static void main(String[] args) {

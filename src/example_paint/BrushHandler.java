@@ -12,6 +12,7 @@ public class BrushHandler implements ActionListener {
         this.mainFrame = mainFrame;
     }
 
+    @Override
     public void actionPerformed(ActionEvent e) {
 
     }

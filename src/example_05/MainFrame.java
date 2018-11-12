@@ -15,6 +15,10 @@ public class MainFrame extends JFrame {
         ColorPanel colorPanel = new ColorPanel();
         this.add(colorPanel, BorderLayout.NORTH);
 
+        container.addMouseListener(new MouseHandler(colorPanel));
+        container.addMouseMotionListener(new MouseHandler(colorPanel));
+        container.addMouseWheelListener(new MouseHandler(colorPanel));
+
         setSize(1000, 700);
         setVisible(true);
     }

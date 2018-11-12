@@ -12,7 +12,24 @@ public class MainFrame extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         Container container = getContentPane();
-//        container.addMouseListener();
+        container.addMouseListener(new MouseListener() {
+            @Override
+            public void mousePressed(MouseEvent e) {
+                helloLabel.setLocation(e.getX(), e.getY());
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent e) {}
+
+            @Override
+            public void mouseClicked(MouseEvent e) {}
+
+            @Override
+            public void mouseEntered(MouseEvent e) {}
+
+            @Override
+            public void mouseExited(MouseEvent e) {}
+        });
 
         container.setLayout(null);
 

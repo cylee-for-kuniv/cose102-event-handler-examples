@@ -19,6 +19,10 @@ public class MainFrame extends JFrame {
         JButton pythonBtn = new JButton("Python");
         JButton cSharpBtn = new JButton("C#");
 
+        javaBtn.addActionListener(new ProgrammingIsFun(jLabel));
+        pythonBtn.addActionListener(new ProgrammingIsFun(jLabel));
+        cSharpBtn.addActionListener(new ProgrammingIsFun(jLabel));
+
         container.add(javaBtn);
         container.add(pythonBtn);
         container.add(cSharpBtn);
@@ -28,8 +32,18 @@ public class MainFrame extends JFrame {
         setVisible(true);
     }
 
-    class ProgrammingIsFun {
+    class ProgrammingIsFun implements ActionListener {
+        private JLabel jLabel;
 
+        public ProgrammingIsFun(JLabel jLabel) {
+            this.jLabel = jLabel;
+        }
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            JButton button = (JButton)e.getSource();
+            jLabel.setText(button.getText() + " is Fun!");
+        }
     }
 
     public static void main(String[] args) {

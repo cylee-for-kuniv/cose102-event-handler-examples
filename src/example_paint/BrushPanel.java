@@ -18,20 +18,24 @@ public class BrushPanel extends JPanel {
         this.setBackground(Color.WHITE);
 
         this.addMouseListener(new MouseAdapter() {
+            @Override
             public void mousePressed(MouseEvent e) {
 
             }
 
+            @Override
             public void mouseReleased(MouseEvent e) {
 
             }
 
+            @Override
             public void mouseClicked(MouseEvent e) {
 
             }
         });
 
         this.addMouseMotionListener(new MouseAdapter() {
+            @Override
             public void mouseDragged(MouseEvent e) {
 
             }

@@ -12,7 +12,7 @@ public class MainFrame extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         Container container = getContentPane();
-//        container.addMouseListener();
+        container.addMouseListener(new MouseHandler());
 
         container.setLayout(null);
 
@@ -24,8 +24,11 @@ public class MainFrame extends JFrame {
         setVisible(true);
     }
 
-    class MouseHandler {
-
+    class MouseHandler extends MouseAdapter{
+        @Override
+        public void mousePressed(MouseEvent e) {
+            helloLabel.setLocation(e.getX(), e.getY());
+        }
     }
 
     public static void main(String[] args) {
