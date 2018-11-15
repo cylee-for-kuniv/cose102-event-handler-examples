@@ -28,6 +28,7 @@ public class MainFrame extends JFrame {
         this.setVisible(true);
         this.setResizable(false);
 
+        // add key listener
         this.setFocusable(true);
         this.requestFocus();
     }

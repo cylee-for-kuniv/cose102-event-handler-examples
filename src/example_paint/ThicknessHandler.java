@@ -26,6 +26,7 @@ public class ThicknessHandler implements ActionListener {
 
     @Override
     public void actionPerformed (ActionEvent e) {
-
+        // changes thickness button and thickness
+        // when thickness button is clicked
     }
 }

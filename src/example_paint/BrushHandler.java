@@ -14,6 +14,6 @@ public class BrushHandler implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-
+        // set brush color
     }
 }

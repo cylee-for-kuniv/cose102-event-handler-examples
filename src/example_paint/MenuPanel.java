@@ -21,6 +21,8 @@ public class MenuPanel extends JPanel {
         this.setBackground(Color.GRAY);
         this.setLayout(new FlowLayout());
 
+        // add action listener
+
         this.add(chosenColor);
         this.add(brushBtn);
         this.add(eraserBtn);

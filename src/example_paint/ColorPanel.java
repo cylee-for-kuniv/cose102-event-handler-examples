@@ -15,6 +15,7 @@ public class ColorPanel extends JPanel {
             JButton button = new JButton(keyList[i]);
             button.setBackground(colorList[i]);
             this.add(button);
+            // add mouse click listener
         }
     }
 }

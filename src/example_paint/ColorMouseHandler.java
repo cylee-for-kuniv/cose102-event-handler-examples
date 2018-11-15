@@ -13,6 +13,6 @@ public class ColorMouseHandler implements ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent e) {
-
+        // set color when clicked color button
     }
 }
