@@ -24,11 +24,11 @@ public class MainFrame extends JFrame {
 
         backgroundPanel.setBackground(Color.WHITE);
 
+        this.addKeyListener(new ColorKeyHandler(this));
         this.setSize(750, 500);
         this.setVisible(true);
         this.setResizable(false);
 
-        // add key listener
         this.setFocusable(true);
         this.requestFocus();
     }

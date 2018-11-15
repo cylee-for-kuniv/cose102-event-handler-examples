@@ -26,7 +26,11 @@ public class ThicknessHandler implements ActionListener {
 
     @Override
     public void actionPerformed (ActionEvent e) {
-        // changes thickness button and thickness
-        // when thickness button is clicked
+        JButton button = (JButton)e.getSource();
+        String nextButtonText = nextThicknessMap.get(button.getText());
+        button.setText(nextButtonText);
+        mainFrame.brushPanel.thickness = thicknessMap.get(nextButtonText);
+
+        mainFrame.requestFocus();
     }
 }

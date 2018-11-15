@@ -27,6 +27,12 @@ public class ColorKeyHandler extends KeyAdapter {
 
     @Override
     public void keyPressed(KeyEvent e) {
-        // set color when key pressed
+        char inputChar = e.getKeyChar();
+
+        if (colorMap.containsKey(inputChar)) {
+            Color newColor = colorMap.get(inputChar);
+            mainFrame.brushPanel.setColor(newColor);
+            mainFrame.menuPanel.chosenColor.setBackground(newColor);
+        }
     }
 }

@@ -13,6 +13,11 @@ public class ColorMouseHandler implements ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        // set color when clicked color button
+        Color newColor = ((JButton)e.getSource()).getBackground();
+
+        mainFrame.brushPanel.setColor(newColor);
+        mainFrame.menuPanel.chosenColor.setBackground(newColor);
+
+        mainFrame.requestFocus();
     }
 }
