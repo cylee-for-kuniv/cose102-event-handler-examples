@@ -55,3 +55,4 @@ public class MouseHandler extends MouseAdapter {
         button.setBackground(color);
     }
 }
+

@@ -25,6 +25,7 @@ public class ColorPanel extends JPanel{
             panel.setBackground(Color.WHITE);
             panel.setSize(200, 100);
             this.add(panel);
+
         }
     }
 }

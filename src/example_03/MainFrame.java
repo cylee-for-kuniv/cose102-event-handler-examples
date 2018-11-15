@@ -15,8 +15,7 @@ public class MainFrame extends JFrame {
         container.addMouseListener(new MouseListener() {
             @Override
             public void mousePressed(MouseEvent e) {
-                helloLabel.setLocation(e.getX(), e.getY());
-            }
+                helloLabel.setLocation(e.getX(), e.getY());}
 
             @Override
             public void mouseReleased(MouseEvent e) {}

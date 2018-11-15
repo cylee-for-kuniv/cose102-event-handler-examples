@@ -19,6 +19,7 @@ public class MainFrame extends JFrame {
         container.addMouseMotionListener(new MouseHandler(colorPanel));
         container.addMouseWheelListener(new MouseHandler(colorPanel));
 
+
         setSize(1000, 700);
         setVisible(true);
     }
